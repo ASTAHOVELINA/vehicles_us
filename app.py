@@ -52,6 +52,8 @@ st.write('3) The prices for salvage and fair condition cars are mostly less then
 fig2 = px.histogram(filtered_data, title="Average price by model", x="price", color='condition')
 st.plotly_chart(fig2)
 
+fig3 = px.histogram(filtered_data, title="Average price by model", x="model", y="price",histfunc="avg")
+st.plotly_chart(fig3)
 
 st.write('Conclusion about the average prices by the model:')
 st.write('1) The average prices of most of the models are below 10 000 $')
